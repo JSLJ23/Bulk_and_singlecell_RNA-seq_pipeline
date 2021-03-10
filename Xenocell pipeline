@@ -1,3 +1,5 @@
+### Test if xenocell.sif was build correctly with singularity ###
+
 singularity exec xenocell_1.0.sif xenocell.py generate_index --help
 
 
@@ -17,6 +19,7 @@ xenocell.py generate_index \
 
 
 ### To check directory of host OS in container bind mount point ###
+### --bind argument will bind contents of specified host directory to location after : in bind argument, :rw specifies read and write permission ###
 
 singularity exec \
 --bind /home/rtlab/Documents:/mnt:rw \

@@ -1,0 +1,56 @@
+singularity exec xenocell_1.0.sif xenocell.py generate_index --help
+
+
+
+### working run ###
+
+singularity exec \
+--bind /home/rtlab/Documents:/mnt:rw \
+/home/rtlab/Documents/xenocell_singularity/xenocell_1.0.sif \
+xenocell.py generate_index \
+--host /mnt/genome/genomes/mm10/mm10.fa \
+--graft /mnt/genome/genomes/hg38/hg38.fa \
+--output /mnt/genome/genome_indices/xenome_hg38_mm10 \
+--threads 16 \
+--memory 60
+
+
+
+### To check directory of host OS in container bind mount point ###
+
+singularity exec \
+--bind /home/rtlab/Documents:/mnt:rw \
+/home/rtlab/Documents/xenocell_singularity/xenocell_1.0.sif \
+ls /mnt/genome/genome_indices
+
+### When this command is run in terminal, a 266MB singularity instance is mounted at /media/rtlab/disk
+
+Fri Mar  5 13:41:57 2021	info	found 35276860 gray bits (out of 4490276226).
+Fri Mar  5 13:42:26 2021	info	total elapsed time: 1308.0086069107056
+Fri Mar  5 13:42:27 2021	info	total elapsed time: 5424.6601648330688
+[2021-03-05 05:42:27] Generation of Xenome index finished!
+###
+
+
+
+### Step A: Classify reads with XenoCell ###
+
+singularity exec \
+--bind /home/rtlab/Documents:/mnt:rw \
+/home/rtlab/Documents/xenocell_singularity/xenocell_1.0.sif \
+xenocell.py classify_reads \
+--transcript /mnt/input_fastq/RHB251019_FASTQ/R251019_S5678_L002_R2_001.fastq.gz \
+--barcode /mnt/input_fastq/RHB251019_FASTQ/R251019_S5678_L002_R1_001.fastq.gz \
+--barcode_start 1 \
+--barcode_length 16 \
+--index /mnt/genome/genome_indices/xenome_hg38_mm10 \
+--output /mnt/xenocell_classify/RHB251019 \
+--threads 16 \
+--memory 60 \
+--compression_level 1
+
+
+
+
+### Step B: Extract graft-specific cellular barcodes ###
+

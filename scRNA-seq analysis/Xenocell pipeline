@@ -42,8 +42,8 @@ singularity exec \
 --bind /home/rtlab/Documents:/mnt:rw \
 /home/rtlab/Documents/xenocell_singularity/xenocell_1.0.sif \
 xenocell.py classify_reads \
---transcript /mnt/input_fastq/RHB251019_FASTQ/R251019_S5678_L002_R2_001.fastq.gz \
---barcode /mnt/input_fastq/RHB251019_FASTQ/R251019_S5678_L002_R1_001.fastq.gz \
+--transcript /mnt/input_fastq/RHB251019_FASTQ/R251019_S1_R2_001.fastq.gz \
+--barcode /mnt/input_fastq/RHB251019_FASTQ/R251019_S1_R1_001.fastq.gz \
 --barcode_start 1 \
 --barcode_length 16 \
 --index /mnt/genome/genome_indices/xenome_hg38_mm10 \

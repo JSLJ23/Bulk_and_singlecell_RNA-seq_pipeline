@@ -8,7 +8,7 @@ singularity exec xenocell_1.0.1.sif xenocell.py generate_index --help
 
 singularity exec \
 --bind /home/rtlab/Documents:/mnt:rw \
-/home/rtlab/Software/Xenocell/xenocell_1.0.1sif \
+/home/rtlab/Software/Xenocell/xenocell_1.0.1.sif \
 xenocell.py generate_index \
 --host /mnt/Genomes/Refseq_GRCm39/mm39.fa \
 --graft /mnt/Genomes/Refseq_GRCh38/hg38.fa \

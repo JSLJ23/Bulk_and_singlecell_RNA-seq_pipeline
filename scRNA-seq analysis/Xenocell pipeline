@@ -12,7 +12,7 @@ singularity exec \
 xenocell.py generate_index \
 --host /mnt/Genomes/Refseq_GRCm39/mm39.fa \
 --graft /mnt/Genomes/Refseq_GRCh38/hg38.fa \
---output /mnt/Genome/genome_indices/xenome_hg38_mm10 \
+--output /mnt/Genomes/genome_indices/xenome_hg38_mm39 \
 --threads 24 \
 --memory 60
 
@@ -22,10 +22,10 @@ xenocell.py generate_index \
 
 singularity exec \
 --bind /home/rtlab/Documents:/mnt:rw \
-/home/rtlab/Documents/xenocell_singularity/xenocell_1.0.sif \
-ls /mnt/genome/genome_indices
+/home/rtlab/Software/Xenocell/xenocell_1.0.1.sif \
+ls /mnt/Genomes/genome_indices
 
-### When this command is run in terminal, a 266MB singularity instance is mounted at /media/rtlab/disk
+### When this command is run in terminal, a 267MB singularity instance is mounted at /media/rtlab/disk
 
 Fri Mar  5 13:41:57 2021	info	found 35276860 gray bits (out of 4490276226).
 Fri Mar  5 13:42:26 2021	info	total elapsed time: 1308.0086069107056
@@ -43,7 +43,7 @@ R251019_S7_L002_R1_001.fastq.gz R251019_S8_L002_R1_001.fastq.gz \
 
 cat R251019_S5_L002_R2_001.fastq.gz R251019_S6_L002_R2_001.fastq.gz \
 R251019_S7_L002_R2_001.fastq.gz R251019_S8_L002_R2_001.fastq.gz \
-> R251019_S5678_L002_R2_001.fastq.gz 
+> R251019_S5678_L002_R2_001.fastq.gz
 
 
 
@@ -51,14 +51,14 @@ R251019_S7_L002_R2_001.fastq.gz R251019_S8_L002_R2_001.fastq.gz \
 
 singularity exec \
 --bind /home/rtlab/Documents:/mnt:rw \
-/home/rtlab/Documents/xenocell_singularity/xenocell_1.0.1.sif \
+/home/rtlab/Software/Xenocell/xenocell_1.0.1.sif \
 xenocell.py classify_reads \
---transcript /mnt/input_fastq/RHB140120_FASTQ/R140120_S1234_L002_R2_001.fastq.gz \
---barcode /mnt/input_fastq/RHB140120_FASTQ/R140120_S1234_L002_R1_001.fastq.gz \
+--transcript /mnt/Input_fastq/RHB251019_fastq/R251019_S5678_L002_R2_001.fastq.gz \
+--barcode /mnt/Input_fastq/RHB251019_fastq/R251019_S5678_L002_R1_001.fastq.gz \
 --barcode_start 1 \
 --barcode_length 16 \
---index /mnt/genome/genome_indices/xenome_hg38_mm10 \
---output /mnt/xenocell_classify/RHB140120 \
+--index mnt/Genomes/genome_indices/xenome_hg38_mm39 \
+--output /mnt/xenocell_classify/RHB251019 \
 --threads 24 \
 --memory 100 \
 --compression_level 1

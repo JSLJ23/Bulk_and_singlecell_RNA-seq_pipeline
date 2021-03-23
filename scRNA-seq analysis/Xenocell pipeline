@@ -8,12 +8,12 @@ singularity exec xenocell_1.0.1.sif xenocell.py generate_index --help
 
 singularity exec \
 --bind /home/rtlab/Documents:/mnt:rw \
-/home/rtlab/Documents/xenocell_singularity/xenocell_1.0.sif \
+/home/rtlab/Documents/xenocell_singularity/xenocell_1.0.1sif \
 xenocell.py generate_index \
---host /mnt/genome/genomes/mm10/mm10.fa \
---graft /mnt/genome/genomes/hg38/hg38.fa \
---output /mnt/genome/genome_indices/xenome_hg38_mm10 \
---threads 16 \
+--host /mnt/Genomes/Refseq_GRCm39/mm39.fa \
+--graft /mnt/Genomes/Refseq_GRCh38/hg38.fa \
+--output /mnt/Genome/genome_indices/xenome_hg38_mm10 \
+--threads 24 \
 --memory 60
 
 

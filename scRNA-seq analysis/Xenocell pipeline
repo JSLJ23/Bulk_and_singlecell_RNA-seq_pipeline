@@ -13,7 +13,7 @@ xenocell.py generate_index \
 --host /mnt/Genomes/Refseq_GRCm39/mm39.fa \
 --graft /mnt/Genomes/Refseq_GRCh38/hg38.fa \
 --output /mnt/Genomes/genome_indices/xenome_hg38_mm39 \
---threads 24 \
+--threads 16 \
 --memory 60
 
 
@@ -57,7 +57,7 @@ xenocell.py classify_reads \
 --barcode /mnt/Input_fastq/RHB251019_fastq/R251019_S5678_L002_R1_001.fastq.gz \
 --barcode_start 1 \
 --barcode_length 16 \
---index mnt/Genomes/genome_indices/xenome_hg38_mm39 \
+--index /mnt/Genomes/genome_indices/xenome_hg38_mm39 \
 --output /mnt/xenocell_classify/RHB251019 \
 --threads 24 \
 --memory 100 \

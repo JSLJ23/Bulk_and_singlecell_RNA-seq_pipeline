@@ -67,3 +67,15 @@ xenocell.py classify_reads \
 
 ### Step B: Extract graft-specific cellular barcodes ###
 
+singularity exec \
+--bind /home/rtlab/Documents:/mnt:rw \
+/home/rtlab/Software/Xenocell/xenocell_1.0.1.sif \
+xenocell.py extract_cellular_barcodes \
+--input /mnt/xenocell_classify/RHB251019 \
+--barcode_start 1 \
+--barcode_length 16 \
+--subset_name graft \
+--lower_threshold 0.0 \
+--upper_threshold 0.1 \
+--threads 24 \
+--compression_level 1

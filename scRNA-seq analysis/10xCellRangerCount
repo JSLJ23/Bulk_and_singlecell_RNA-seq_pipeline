@@ -1,0 +1,23 @@
+cellranger count --id=RHB251019-XCG_run1 \
+--transcriptome=/home/rtlab/Documents/Genomes/refdata-gex-GRCh38-2020-A \
+--fastqs=/home/rtlab/Documents/xenocell_classify/RHB251019/graft \
+--sample=R251019-XCG \
+--expect-cells=10000
+
+cellranger count --id=RHB140120-XCG_run1 \
+--transcriptome=/home/rtlab/Documents/Genomes/refdata-gex-GRCh38-2020-A \
+--fastqs=/home/rtlab/Documents/xenocell_classify/RHB140120/graft \
+--sample=R140120-XCG \
+--expect-cells=10000
+
+cellranger count --id=RHB280217-XCG_run1 \
+--transcriptome=/home/rtlab/Documents/Genomes/refdata-gex-GRCh38-2020-A \
+--fastqs=/home/rtlab/Documents/xenocell_classify/RHB280217/graft \
+--sample=R280217-XCG \
+--expect-cells=10000
+
+cellranger count --id=RHB170217-XCG_run1 \
+--transcriptome=/home/rtlab/Documents/Genomes/refdata-gex-GRCh38-2020-A \
+--fastqs=/home/rtlab/Documents/xenocell_classify/RHB170217/graft \
+--sample=R170217-XCG \
+--expect-cells=10000

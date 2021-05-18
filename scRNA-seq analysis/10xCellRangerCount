@@ -1,4 +1,6 @@
-### Open terminal in "/home/rtlab/Documents/10XCR_runs" directory and run appropriate cellranger count id 
+### Open terminal in "/home/rtlab/Documents/10XCR_runs" directory and run appropriate cellranger count id
+
+
 
 cellranger count --id=RHB251019-XCG_run1 \
 --transcriptome=/home/rtlab/Documents/Genomes/refdata-gex-GRCh38-2020-A \
@@ -38,6 +40,6 @@ cellranger count --id=RHB251019RL-XCG_run1 \
 --sample=RHB251019RL-XCG \
 --expect-cells=10000
 
-RHB251019RL_S1234_L002_R1_001.fastq.gz
+RHB251019RL-XCG_S1234_L002_R1_001.fastq.gz
 
-RHB251019RL_S1234_L002_R2_001.fastq.gz
+RHB251019RL-XCG_S1234_L002_R2_001.fastq.gz

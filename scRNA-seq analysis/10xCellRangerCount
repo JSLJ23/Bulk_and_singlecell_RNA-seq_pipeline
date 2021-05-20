@@ -40,6 +40,18 @@ cellranger count --id=RHB251019RL-XCG_run1 \
 --sample=RHB251019RL-XCG \
 --expect-cells=10000
 
-RHB251019RL-XCG_S1234_L002_R1_001.fastq.gz
+RHB251019RL-XCG_S1234_L002_R1_001.fastq.gz --barcode
 
-RHB251019RL-XCG_S1234_L002_R2_001.fastq.gz
+RHB251019RL-XCG_S1234_L002_R2_001.fastq.gz --transcript
+
+
+
+cellranger count --id=RHB251019RL-XCG_run1 \
+--transcriptome=/home/rtlab/Documents/Genomes/refdata-gex-GRCh38-2020-A \
+--fastqs=/home/rtlab/Documents/xenocell_classify/RHB251019RG/graft \
+--sample=RHB251019RG-XCG \
+--expect-cells=10000
+
+RHB251019RG-XCG_S1234_L004_R1_001.fastq.gz --barcode
+
+RHB251019RG-XCG_S1234_L004_R2_001.fastq.gz --transcript

@@ -1,0 +1,7 @@
+source activate snakemake
+
+module use /usr/share/modules/modulefiles
+
+module load modules
+
+snakemake --cores 3

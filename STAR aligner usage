@@ -18,7 +18,7 @@ ls -d -1 "$PWD"/* > listOfFiles.list
 ### Align reads to genome with genome index and quantify with STAR quantMode geneCounts ###
 
 STAR \
---runThreadN 24 \
+--runThreadN 16 \
 --genomeDir /home/rtlab/Documents/Genomes/genome_indices/star_hg38 \
 --readFilesIn /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siGLP1_read1.fq.gz /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siGLP1_read2.fq.gz \
 --readFilesCommand zcat \
@@ -29,7 +29,7 @@ STAR \
 --outSAMattributes NH HI NM MD AS
 
 STAR \
---runThreadN 24 \
+--runThreadN 16 \
 --genomeDir /home/rtlab/Documents/Genomes/genome_indices/star_hg38 \
 --readFilesIn /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siGLP2_read1.fq.gz /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siGLP2_read2.fq.gz \
 --readFilesCommand zcat \
@@ -40,7 +40,7 @@ STAR \
 --outSAMattributes NH HI NM MD AS
 
 STAR \
---runThreadN 24 \
+--runThreadN 16 \
 --genomeDir /home/rtlab/Documents/Genomes/genome_indices/star_hg38 \
 --readFilesIn /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siGLP3_read1.fq.gz /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siGLP3_read2.fq.gz \
 --readFilesCommand zcat \
@@ -51,7 +51,7 @@ STAR \
 --outSAMattributes NH HI NM MD AS
 
 STAR \
---runThreadN 24 \
+--runThreadN 16 \
 --genomeDir /home/rtlab/Documents/Genomes/genome_indices/star_hg38 \
 --readFilesIn /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siScr1_read1.fq.gz /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siScr1_read2.fq.gz \
 --readFilesCommand zcat \
@@ -62,7 +62,7 @@ STAR \
 --outSAMattributes NH HI NM MD AS
 
 STAR \
---runThreadN 24 \
+--runThreadN 16 \
 --genomeDir /home/rtlab/Documents/Genomes/genome_indices/star_hg38 \
 --readFilesIn /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siScr2_read1.fq.gz /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siScr2_read2.fq.gz \
 --readFilesCommand zcat \
@@ -73,7 +73,7 @@ STAR \
 --outSAMattributes NH HI NM MD AS
 
 STAR \
---runThreadN 24 \
+--runThreadN 16 \
 --genomeDir /home/rtlab/Documents/Genomes/genome_indices/star_hg38 \
 --readFilesIn /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siScr3_read1.fq.gz /home/rtlab/Documents/Input_fastq/AN_RH41_siGLP_vs_siSCR/RH41_siScr3_read2.fq.gz \
 --readFilesCommand zcat \
